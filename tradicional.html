@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GBS — Encuestas Canal Tradicional</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f4f8; min-height: 100vh; display: flex; flex-direction: column; }
+  header { background: #1a3a6b; padding: 18px 24px; display: flex; align-items: center; gap: 14px; }
+  .logo-box { background: white; border-radius: 6px; padding: 6px 12px; font-size: 22px; font-weight: 900; color: #1a3a6b; letter-spacing: -1px; }
+  .logo-sub { color: #8ab4d4; font-size: 12px; letter-spacing: 1px; }
+  .hero { background: linear-gradient(135deg, #1a3a6b 0%, #2a5298 100%); color: white; text-align: center; padding: 48px 24px 40px; }
+  .hero h1 { font-size: clamp(22px, 5vw, 32px); font-weight: 700; margin-bottom: 10px; }
+  .hero p { font-size: 14px; color: #8ab4d4; max-width: 400px; margin: 0 auto; }
+  .badge { display: inline-block; background: rgba(255,255,255,0.15); color: white; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-top: 10px; letter-spacing: 1px; }
+  .cards { display: flex; flex-direction: column; gap: 16px; padding: 32px 20px; max-width: 480px; margin: 0 auto; width: 100%; flex: 1; }
+  .card { background: white; border-radius: 12px; padding: 24px 20px; text-decoration: none; color: inherit; box-shadow: 0 2px 12px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 18px; border-left: 5px solid #1a3a6b; }
+  .card:hover, .card:active { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,58,107,0.15); }
+  .card-icon { width: 52px; height: 52px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; }
+  .card-icon.azul { background: #eef2f7; }
+  .card-icon.verde { background: #eaf7ef; }
+  .card-body { flex: 1; }
+  .card-title { font-size: 16px; font-weight: 700; color: #1a3a6b; margin-bottom: 4px; }
+  .card-desc { font-size: 12px; color: #777; line-height: 1.5; }
+  .card-arrow { font-size: 20px; color: #1a3a6b; opacity: 0.5; }
+  .divider { text-align: center; color: #aaa; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 4px 0; display: flex; align-items: center; gap: 10px; }
+  .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: #ddd; }
+  footer { background: #1a3a6b; color: #8ab4d4; text-align: center; padding: 14px; font-size: 11px; letter-spacing: 0.5px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-box">GBS</div>
+  <div>
+    <div style="color:white;font-weight:600;font-size:14px;">Global Business Solutions</div>
+    <div class="logo-sub">PORTAL DE ENCUESTAS</div>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Encuestas de Campo</h1>
+  <p>Selecciona la encuesta que necesitas completar hoy.</p>
+  <div class="badge">CANAL TRADICIONAL</div>
+</div>
+
+<div class="cards">
+
+  <a class="card" href="https://script.google.com/macros/s/AKfycbzpRBB8hMvUFDZXLCIvFaaPQKR0kaLYCCohgk32yAeZOIX0cXJe3ia_yx457F-6x86K/exec">
+    <div class="card-icon azul">📅</div>
+    <div class="card-body">
+      <div class="card-title">Fechas Cortas</div>
+      <div class="card-desc">Registro de productos próximos a vencer en puntos de venta.</div>
+    </div>
+    <div class="card-arrow">›</div>
+  </a>
+
+  <div class="divider">o</div>
+
+  <a class="card" href="https://script.google.com/macros/s/AKfycbytQYfEC11GLjd7QzbgS3mhMjsF3ogGWCXzEUkRF8lr9oJXxzP8nIfsAa_t1eTPHc16/exec">
+    <div class="card-icon verde">🔍</div>
+    <div class="card-body">
+      <div class="card-title">Calidad Rey Lácteos</div>
+      <div class="card-desc">Reporte de novedades y estado de productos en góndola.</div>
+    </div>
+    <div class="card-arrow">›</div>
+  </a>
+
+</div>
+
+<footer>GBS — Global Business Solutions &nbsp;·&nbsp; Canal Tradicional</footer>
+
+</body>
+</html>
