@@ -13,6 +13,7 @@
   .hero { background: linear-gradient(135deg, #1a3a6b 0%, #2a5298 100%); color: white; text-align: center; padding: 48px 24px 40px; }
   .hero h1 { font-size: clamp(22px, 5vw, 32px); font-weight: 700; margin-bottom: 10px; }
   .hero p { font-size: 14px; color: #8ab4d4; max-width: 400px; margin: 0 auto; }
+  .badge { display: inline-block; background: rgba(255,255,255,0.15); color: white; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-top: 10px; letter-spacing: 1px; }
   .cards { display: flex; flex-direction: column; gap: 16px; padding: 32px 20px; max-width: 480px; margin: 0 auto; width: 100%; flex: 1; }
   .card { background: white; border-radius: 12px; padding: 24px 20px; text-decoration: none; color: inherit; box-shadow: 0 2px 12px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 18px; transition: transform 0.15s, box-shadow 0.15s; border-left: 5px solid #1a3a6b; }
   .card:hover, .card:active { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,58,107,0.15); }
@@ -41,6 +42,7 @@
 <div class="hero">
   <h1>Encuestas de Campo</h1>
   <p>Selecciona la encuesta que necesitas completar hoy.</p>
+  <div class="badge">CANAL MODERNO</div>
 </div>
 
 <div class="cards">
