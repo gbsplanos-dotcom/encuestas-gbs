@@ -7,46 +7,65 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f4f8; min-height: 100vh; display: flex; flex-direction: column; }
-  header { background: #1a3a6b; padding: 18px 24px; display: flex; align-items: center; gap: 14px; }
-  .logo-box { background: white; border-radius: 6px; padding: 6px 12px; font-size: 22px; font-weight: 900; color: #1a3a6b; letter-spacing: -1px; }
-  .logo-sub { color: #8ab4d4; font-size: 12px; letter-spacing: 1px; }
-  .hero { background: linear-gradient(135deg, #1a3a6b 0%, #2a5298 100%); color: white; text-align: center; padding: 48px 24px 40px; }
-  .hero h1 { font-size: clamp(22px, 5vw, 32px); font-weight: 700; margin-bottom: 10px; }
-  .hero p { font-size: 14px; color: #8ab4d4; max-width: 400px; margin: 0 auto; }
-  .badge { display: inline-block; background: rgba(255,255,255,0.15); color: white; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-top: 10px; letter-spacing: 1px; }
-  .cards { display: flex; flex-direction: column; gap: 16px; padding: 32px 20px; max-width: 480px; margin: 0 auto; width: 100%; flex: 1; }
-  .card { background: white; border-radius: 12px; padding: 24px 20px; text-decoration: none; color: inherit; box-shadow: 0 2px 12px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 18px; transition: transform 0.15s, box-shadow 0.15s; border-left: 5px solid #1a3a6b; }
-  .card:hover, .card:active { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,58,107,0.15); }
-  .card-icon { width: 52px; height: 52px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; }
-  .card-icon.azul { background: #eef2f7; }
-  .card-icon.verde { background: #eaf7ef; }
-  .card-icon.naranja { background: #fff3e0; }
-  .card-body { flex: 1; }
-  .card-title { font-size: 16px; font-weight: 700; color: #1a3a6b; margin-bottom: 4px; }
-  .card-desc { font-size: 12px; color: #777; line-height: 1.5; }
-  .card-arrow { font-size: 20px; color: #1a3a6b; opacity: 0.5; }
-  .divider { text-align: center; color: #aaa; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; padding: 4px 0; display: flex; align-items: center; gap: 10px; }
-  .divider::before, .divider::after { content: ''; flex: 1; height: 1px; background: #ddd; }
-  footer { background: #1a3a6b; color: #8ab4d4; text-align: center; padding: 14px; font-size: 11px; letter-spacing: 0.5px; }
+
+  header { background: linear-gradient(135deg, #1a3a6b 0%, #2a5298 100%); padding: 20px 24px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+  .logo-box { background: white; border-radius: 8px; padding: 8px 14px; font-size: 22px; font-weight: 900; color: #1a3a6b; letter-spacing: -1px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+  .logo-sub { color: #8ab4d4; font-size: 11px; letter-spacing: 1.5px; margin-top: 2px; }
+
+  .hero { background: linear-gradient(135deg, #1a3a6b 0%, #2a5298 100%); color: white; text-align: center; padding: 36px 24px 48px; position: relative; }
+  .hero::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 32px; background: #f0f4f8; border-radius: 32px 32px 0 0; }
+  .hero h1 { font-size: clamp(20px, 5vw, 28px); font-weight: 700; margin-bottom: 8px; }
+  .hero p { font-size: 13px; color: #8ab4d4; max-width: 360px; margin: 0 auto; }
+  .badge { display: inline-block; background: rgba(255,255,255,0.2); color: white; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-top: 12px; letter-spacing: 1.5px; border: 1px solid rgba(255,255,255,0.3); }
+
+  .cards { display: flex; flex-direction: column; gap: 14px; padding: 24px 20px 40px; max-width: 480px; margin: 0 auto; width: 100%; flex: 1; }
+
+  .section-label { font-size: 10px; font-weight: 700; color: #999; letter-spacing: 2px; text-transform: uppercase; padding: 4px 4px 2px; margin-top: 6px; }
+
+  .card { background: white; border-radius: 14px; padding: 18px 16px; text-decoration: none; color: inherit; box-shadow: 0 2px 12px rgba(0,0,0,0.07); display: flex; align-items: center; gap: 16px; transition: transform 0.15s, box-shadow 0.15s; border-left: 5px solid #1a3a6b; position: relative; overflow: hidden; }
+  .card::before { content: ''; position: absolute; top: 0; right: 0; width: 80px; height: 100%; opacity: 0.04; background: linear-gradient(135deg, transparent, #1a3a6b); }
+  .card:hover, .card:active { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,58,107,0.15); }
+
+  .card.verde { border-left-color: #27ae60; }
+  .card.verde .card-icon { background: #eaf7ef; }
+  .card.naranja { border-left-color: #e67e22; }
+  .card.naranja .card-icon { background: #fef5ec; }
+  .card.morado { border-left-color: #8e44ad; }
+  .card.morado .card-icon { background: #f4ecfb; }
+  .card.celeste { border-left-color: #2980b9; }
+  .card.celeste .card-icon { background: #eaf4fb; }
+
+  .card-icon { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; background: #eef2f7; }
+  .card-body { flex: 1; min-width: 0; }
+  .card-title { font-size: 15px; font-weight: 700; color: #1a3a6b; margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card-desc { font-size: 11px; color: #888; line-height: 1.5; }
+  .card-arrow { font-size: 22px; color: #ccc; flex-shrink: 0; }
+
+  footer { background: #1a3a6b; color: #8ab4d4; text-align: center; padding: 14px; font-size: 11px; letter-spacing: 0.5px; margin-top: auto; }
 </style>
 </head>
 <body>
+
 <header>
   <div class="logo-box">GBS</div>
   <div>
-    <div style="color:white;font-weight:600;font-size:14px;">Global Business Solutions</div>
+    <div style="color:white;font-weight:700;font-size:15px;">Global Business Solutions</div>
     <div class="logo-sub">PORTAL DE ENCUESTAS</div>
   </div>
 </header>
+
 <div class="hero">
   <h1>Encuestas de Campo</h1>
   <p>Selecciona la encuesta que necesitas completar hoy.</p>
   <div class="badge">CANAL MODERNO</div>
 </div>
+
 <div class="cards">
 
-  <a class="card" href="https://script.google.com/macros/s/AKfycbxSwkezNFxPSHZ4WgE-holaRr9YSFxlQVcAd3nopcxlm5pq6mi9Y3UH_8fX68yv8orwqA/exec">
-    <div class="card-icon verde">🔍</div>
+  <div class="section-label">Calidad y Devoluciones</div>
+
+  <a class="card verde" href="https://script.google.com/macros/s/AKfycbxSwkezNFxPSHZ4WgE-holaRr9YSFxlQVcAd3nopcxlm5pq6mi9Y3UH_8fX68yv8orwqA/exec">
+    <div class="card-icon">🔍</div>
     <div class="card-body">
       <div class="card-title">Calidad Rey Lácteos</div>
       <div class="card-desc">Reporte de novedades y estado de productos en góndola.</div>
@@ -54,18 +73,37 @@
     <div class="card-arrow">›</div>
   </a>
 
-  <div class="divider">o</div>
-
-  <a class="card" href="https://script.google.com/macros/s/AKfycbzn3Z5TcBnkySTvxGxp6PN6jFQyp_zzCTfpfhQa61BRYzmAwYR27o79o-UN-moPfFD4/exec">
-    <div class="card-icon naranja">📦</div>
+  <a class="card naranja" href="https://script.google.com/macros/s/AKfycbzn3Z5TcBnkySTvxGxp6PN6jFQyp_zzCTfpfhQa61BRYzmAwYR27o79o-UN-moPfFD4/exec">
+    <div class="card-icon">📦</div>
     <div class="card-body">
       <div class="card-title">Devoluciones Moderno</div>
-      <div class="card-desc">Registro de devoluciones por caducidad o calidad en canal moderno.</div>
+      <div class="card-desc">Registro de devoluciones por caducidad o calidad.</div>
+    </div>
+    <div class="card-arrow">›</div>
+  </a>
+
+  <div class="section-label" style="margin-top:8px;">Perchas y Precios</div>
+
+  <a class="card celeste" href="https://script.google.com/macros/s/AKfycbz2RGgiX8c6Ix-HZ9SdYKopqxgjhf9F0XoJBNKAkoY1kPa_O_sII8Mkebte35Ss6iC9/exec">
+    <div class="card-icon">🥛</div>
+    <div class="card-body">
+      <div class="card-title">Leche UHT — Maxi</div>
+      <div class="card-desc">Conteo de caras y estado de percha Leche UHT.</div>
+    </div>
+    <div class="card-arrow">›</div>
+  </a>
+
+  <a class="card morado" href="https://script.google.com/macros/s/AKfycbwkCr627euPitr-TfgnK9-au5XF7GM70YQRKUT5IF4LgSir7-DL3Z1QYmk_D6wZCbQHvA/exec">
+    <div class="card-icon">💰</div>
+    <div class="card-body">
+      <div class="card-title">Precios Canal Moderno</div>
+      <div class="card-desc">Registro de precios de productos en góndola.</div>
     </div>
     <div class="card-arrow">›</div>
   </a>
 
 </div>
+
 <footer>GBS — Global Business Solutions &nbsp;·&nbsp; Uso interno</footer>
 </body>
 </html>
