@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GBS — Encuestas Abbott</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f4f8; min-height: 100vh; display: flex; flex-direction: column; }
+
+  header { background: linear-gradient(135deg, #003087 0%, #0056C8 100%); padding: 20px 24px; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+  .logo-box { background: white; border-radius: 8px; padding: 8px 14px; font-size: 22px; font-weight: 900; color: #003087; letter-spacing: -1px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); }
+  .logo-sub { color: #8ab4d4; font-size: 11px; letter-spacing: 1.5px; margin-top: 2px; }
+
+  .hero { background: linear-gradient(135deg, #003087 0%, #0056C8 100%); color: white; text-align: center; padding: 36px 24px 48px; position: relative; }
+  .hero::after { content: ''; position: absolute; bottom: -1px; left: 0; right: 0; height: 32px; background: #f0f4f8; border-radius: 32px 32px 0 0; }
+  .hero h1 { font-size: clamp(20px, 5vw, 28px); font-weight: 700; margin-bottom: 8px; }
+  .hero p { font-size: 13px; color: #8ab4d4; max-width: 360px; margin: 0 auto; }
+  .badge { display: inline-block; background: rgba(255,255,255,0.2); color: white; font-size: 11px; font-weight: 700; padding: 5px 14px; border-radius: 20px; margin-top: 12px; letter-spacing: 1.5px; border: 1px solid rgba(255,255,255,0.3); }
+
+  .cards { display: flex; flex-direction: column; gap: 14px; padding: 24px 20px 40px; max-width: 480px; margin: 0 auto; width: 100%; flex: 1; }
+
+  .section-label { font-size: 10px; font-weight: 700; color: #999; letter-spacing: 2px; text-transform: uppercase; padding: 4px 4px 2px; margin-top: 6px; }
+
+  .card { background: white; border-radius: 14px; padding: 18px 16px; text-decoration: none; color: inherit; box-shadow: 0 2px 12px rgba(0,0,0,0.07); display: flex; align-items: center; gap: 16px; transition: transform 0.15s, box-shadow 0.15s; border-left: 5px solid #003087; position: relative; overflow: hidden; }
+  .card::before { content: ''; position: absolute; top: 0; right: 0; width: 80px; height: 100%; opacity: 0.04; background: linear-gradient(135deg, transparent, #003087); }
+  .card:hover, .card:active { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,48,135,0.15); }
+
+  .card.azul   { border-left-color: #0056C8; }
+  .card.azul   .card-icon { background: #e8effc; }
+  .card.verde  { border-left-color: #27ae60; }
+  .card.verde  .card-icon { background: #eaf7ef; }
+  .card.morado { border-left-color: #8e44ad; }
+  .card.morado .card-icon { background: #f4ecfb; }
+
+  .card-icon { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; background: #eef2f7; }
+  .card-body { flex: 1; min-width: 0; }
+  .card-title { font-size: 15px; font-weight: 700; color: #003087; margin-bottom: 3px; }
+  .card-desc { font-size: 11px; color: #888; line-height: 1.5; }
+  .card-arrow { font-size: 22px; color: #ccc; flex-shrink: 0; }
+
+  footer { background: #003087; color: #8ab4d4; text-align: center; padding: 14px; font-size: 11px; letter-spacing: 0.5px; margin-top: auto; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-box">GBS</div>
+  <div>
+    <div style="color:white;font-weight:700;font-size:15px;">Global Business Solutions</div>
+    <div class="logo-sub">PORTAL DE ENCUESTAS</div>
+  </div>
+</header>
+
+<div class="hero">
+  <h1>Encuestas de Campo</h1>
+  <p>Selecciona la encuesta que necesitas completar hoy.</p>
+  <div class="badge">ABBOTT</div>
+</div>
+
+<div class="cards">
+
+  <div class="section-label">Encuestas Activas</div>
+
+  <a class="card azul" href="https://script.google.com/macros/s/AKfycbytHMZZuNdbYw3RXCSVap1fui_aLfW-hGdnAMtTJTiJEna-upNnfIcndTCm65EXnx9RsA/exec">
+    <div class="card-icon">💰</div>
+    <div class="card-body">
+      <div class="card-title">Precios Abbott</div>
+      <div class="card-desc">Registro de precios PVP y PVC por cadena y categoría.</div>
+    </div>
+    <div class="card-arrow">›</div>
+  </a>
+
+</div>
+
+<footer>GBS — Global Business Solutions &nbsp;·&nbsp; Uso interno</footer>
+</body>
+</html>
