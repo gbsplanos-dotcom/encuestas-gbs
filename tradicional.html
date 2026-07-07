@@ -18,8 +18,9 @@
   .card { background: white; border-radius: 12px; padding: 24px 20px; text-decoration: none; color: inherit; box-shadow: 0 2px 12px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 18px; border-left: 5px solid #1a3a6b; }
   .card:hover, .card:active { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,58,107,0.15); }
   .card-icon { width: 52px; height: 52px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 26px; flex-shrink: 0; }
-  .card-icon.azul { background: #eef2f7; }
-  .card-icon.verde { background: #eaf7ef; }
+  .card-icon.azul     { background: #eef2f7; }
+  .card-icon.verde    { background: #eaf7ef; }
+  .card-icon.teal     { background: #e0f4f1; }
   .card-body { flex: 1; }
   .card-title { font-size: 16px; font-weight: 700; color: #1a3a6b; margin-bottom: 4px; }
   .card-desc { font-size: 12px; color: #777; line-height: 1.5; }
@@ -30,7 +31,6 @@
 </style>
 </head>
 <body>
-
 <header>
   <div class="logo-box">GBS</div>
   <div>
@@ -38,15 +38,12 @@
     <div class="logo-sub">PORTAL DE ENCUESTAS</div>
   </div>
 </header>
-
 <div class="hero">
   <h1>Encuestas de Campo</h1>
   <p>Selecciona la encuesta que necesitas completar hoy.</p>
   <div class="badge">CANAL TRADICIONAL</div>
 </div>
-
 <div class="cards">
-
   <a class="card" href="https://script.google.com/macros/s/AKfycbzpRBB8hMvUFDZXLCIvFaaPQKR0kaLYCCohgk32yAeZOIX0cXJe3ia_yx457F-6x86K/exec">
     <div class="card-icon azul">📅</div>
     <div class="card-body">
@@ -55,9 +52,7 @@
     </div>
     <div class="card-arrow">›</div>
   </a>
-
   <div class="divider">o</div>
-
   <a class="card" href="https://script.google.com/macros/s/AKfycbytQYfEC11GLjd7QzbgS3mhMjsF3ogGWCXzEUkRF8lr9oJXxzP8nIfsAa_t1eTPHc16/exec">
     <div class="card-icon verde">🔍</div>
     <div class="card-body">
@@ -66,10 +61,16 @@
     </div>
     <div class="card-arrow">›</div>
   </a>
-
+  <div class="divider">o</div>
+  <a class="card" style="border-left-color:#16a085;" href="https://script.google.com/macros/s/AKfycby-LDdR27eGPt4xNJNPu-jFQnFtL8x7q7AUcpt46Whg9mzpQ3EELQW2h8nB5L7I4SjBag/exec">
+    <div class="card-icon teal">📊</div>
+    <div class="card-body">
+      <div class="card-title">Participación en Percha</div>
+      <div class="card-desc">Conteo de caras por marca en subcategoría — Leche, Queso, Yogurt y más.</div>
+    </div>
+    <div class="card-arrow">›</div>
+  </a>
 </div>
-
 <footer>GBS — Global Business Solutions &nbsp;·&nbsp; Canal Tradicional</footer>
-
 </body>
 </html>
