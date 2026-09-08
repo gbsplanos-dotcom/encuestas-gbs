@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reporte Quifatex Gasolineras | GBS</title>
+<link rel="icon" type="image/png" href="LOGO_GBS.png">
+<style>
+  :root{
+    --azul:#1A4E8C;
+    --azul-oscuro:#123A6B;
+    --rojo:#C8391B;
+    --amarillo:#F5D200;
+    --verde:#8DB92E;
+    --celeste:#2BA3DC;
+    --fondo:#F5F7FA;
+    --texto:#2B3947;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+    background:var(--fondo);
+    color:var(--texto);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .encabezado{
+    width:100%;
+    background:#FFFFFF;
+    border-bottom:4px solid var(--azul);
+    padding:28px 16px 22px;
+    text-align:center;
+  }
+  .encabezado img{
+    width:190px;
+    max-width:70%;
+    height:auto;
+  }
+  main{
+    width:100%;
+    max-width:560px;
+    padding:36px 20px 48px;
+    flex:1;
+  }
+  .cuadritos{
+    display:flex;
+    gap:6px;
+    justify-content:center;
+    margin-bottom:14px;
+  }
+  .cuadritos span{width:14px;height:14px;display:block;}
+  .cuadritos span:nth-child(1){background:var(--rojo);}
+  .cuadritos span:nth-child(2){background:var(--amarillo);}
+  .cuadritos span:nth-child(3){background:var(--verde);}
+  .cuadritos span:nth-child(4){background:var(--celeste);}
+  h1{
+    color:var(--azul);
+    font-size:1.5rem;
+    font-weight:700;
+    text-align:center;
+    margin-bottom:6px;
+  }
+  .subtitulo{
+    text-align:center;
+    font-size:.95rem;
+    color:#5A6B7C;
+    margin-bottom:34px;
+  }
+  .reporte{
+    display:block;
+    background:#FFFFFF;
+    border:1px solid #DCE3EB;
+    border-left:6px solid var(--azul);
+    border-radius:8px;
+    padding:20px 22px;
+    margin-bottom:18px;
+    text-decoration:none;
+    color:inherit;
+    transition:border-color .15s ease, transform .15s ease;
+  }
+  .reporte:hover,.reporte:focus-visible{
+    border-left-color:var(--celeste);
+    transform:translateX(4px);
+    outline:none;
+  }
+  .reporte:focus-visible{box-shadow:0 0 0 3px rgba(43,163,220,.4);}
+  .reporte h2{
+    color:var(--azul);
+    font-size:1.12rem;
+    margin-bottom:4px;
+  }
+  .reporte p{
+    font-size:.9rem;
+    color:#5A6B7C;
+    line-height:1.45;
+  }
+  .reporte .abrir{
+    display:inline-block;
+    margin-top:12px;
+    background:var(--azul);
+    color:#FFFFFF;
+    font-size:.85rem;
+    font-weight:600;
+    padding:8px 18px;
+    border-radius:5px;
+  }
+  .reporte:hover .abrir{background:var(--azul-oscuro);}
+  footer{
+    width:100%;
+    text-align:center;
+    padding:16px;
+    font-size:.8rem;
+    color:#7C8A99;
+    background:#FFFFFF;
+    border-top:1px solid #E3E9F0;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reporte,.reporte:hover{transition:none;transform:none;}
+  }
+</style>
+</head>
+<body>
+
+  <header class="encabezado">
+    <img src="LOGO_GBS.png" alt="GBS Global Business Solutions">
+  </header>
+
+  <main>
+    <div class="cuadritos"><span></span><span></span><span></span><span></span></div>
+    <h1>Reporte Quifatex Gasolineras</h1>
+    <p class="subtitulo">Seleccione el reporte que desea consultar</p>
+
+    <a class="reporte"
+       href="https://docs.google.com/spreadsheets/d/1oIIwwl0Nuk_zEuoLI4GFnUZN2eyybtf7zSAnhUGN8OQ/edit?usp=sharing"
+       target="_blank" rel="noopener">
+      <h2>Reporte Novedades</h2>
+      <p>Novedades levantadas en punto de venta: marca reportada, promociones y foto de respaldo.</p>
+      <span class="abrir">Abrir reporte</span>
+    </a>
+
+    <a class="reporte"
+       href="https://docs.google.com/spreadsheets/d/1jxRwdmxWuEQ6j02g0JpPxvXeLPOAJqncBuaQRw0s_IM/edit?usp=sharing"
+       target="_blank" rel="noopener">
+      <h2>Reporte Devoluciones</h2>
+      <p>Producto Trolli reportado para devolución: lote, fecha de caducidad, unidades y foto.</p>
+      <span class="abrir">Abrir reporte</span>
+    </a>
+  </main>
+
+  <footer>GBS Global Business Solutions &middot; Quifatex Gasolineras</footer>
+
+</body>
+</html>
